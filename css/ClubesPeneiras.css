@@ -1,0 +1,334 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(227, 239, 242); /* cinza moderno */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fbbf24;
+  padding: 15px 25px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  margin-right: auto;
+}
+
+.buttons button {
+  background-color: #3b82f6;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  margin-left: 10px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+  background-color: #2563eb;
+}
+
+.message {
+  background-color: #bfdbfe;
+  color: #1e3a8a;
+  text-align: center;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.main {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.ligas {
+  width: 25%;
+  background-color: #fef3c7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  font-size: 16px;
+}
+
+.ligas h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.ligas ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ligas li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 16px;
+  padding: 6px 0;
+}
+
+.ligas li img {
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
+}
+
+.clubes {
+  width: 75%;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.clube {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  width: calc(50% - 10px);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.clube img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.clube h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.clube ul {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+}
+
+.clube ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 6px 0;
+}
+
+.clube ul li img {
+  width: 22px;
+  height: 22px;
+  margin-right: 6px;
+}
+
+/* Caixa de notificações */
+#notificacoes-box {
+  position: absolute;
+  top: 70px;
+  right: 140px;
+  width: 280px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  padding: 12px 0;
+  z-index: 100;
+  font-family: 'Poppins', sans-serif;
+  animation: slideDown 0.3s ease;
+}
+
+#notificacoes-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#notificacoes-box li {
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #333;
+  transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#notificacoes-box li:hover {
+  background-color: #f3f4f6;
+  cursor: pointer;
+}
+
+/* Animação de entrada suave */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+
+.search-input {
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  font-size: 14px;
+  width: 200px;
+}
+
+.search-btn {
+  padding: 10px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.search-btn:hover {
+  background-color: #0056b3;
+}
+
+/*logo do Pergil */
+.profile-btn {
+  background-color: #3b82f6;
+  color: white;
+  padding: 12px 20px;
+  margin-left: 10px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.profile-btn:hover {
+  background-color: #2563eb;
+}
+
+/*Rodapé*/
+
+.footer {
+  background-color: #fbbf24; /* amarelo */
+  color: #fff;
+  padding: 20px 20px 10px;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  gap: 20px;
+}
+
+.footer h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1 1 250px;
+}
+
+.footer-center ul,
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-center ul li,
+.footer-right ul li {
+  margin-bottom: 6px;
+}
+
+.footer-center ul li a,
+.footer-right ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  transition: opacity 0.3s;
+}
+
+.footer-center ul li a:hover,
+.footer-right ul li a:hover {
+  opacity: 0.8;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  padding-top: 8px;
+  font-size: 13px;
+}
+
+/*hoovers*/
+
+/* Hover nas ligas */
+.ligas li:hover {
+  background-color: #fde68a;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover nos clubes */
+.clube:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Link nos títulos dos clubes */
+.clube h3 a {
+  color: #000;
+  text-decoration: none;
+}
+
+.clube h3 a:hover {
+  text-decoration: underline;
+}
+  

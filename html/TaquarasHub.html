@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+        <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Perfil do Usuário</title>
+          <link rel="stylesheet" href="../css/TaquarasHub.css" />
+
+          <div class="container">
+            <header class="header">
+              <div class="title">Sport HUB</div>
+              <div class="buttons">
+                <input type="text" id="searchInput" placeholder="Buscar clube..." class="search-input">
+                <!--<button id="searchBtn" class="search-btn">🔍 Procurar</button>-->
+                <button id="notificacoes-btn">🔔 Notificações</button>
+                <a href="../php/ClubesPeneiras.php" class="profile-btn">👤 Principal</a>
+              </div>
+        
+              <div id="notificacoes-box" class="hidden">
+                <ul>
+                  <li> Peneira do Santa Catarina é amanhã! </li>
+                  <li> A.D.C Taquaras enviou um E-mail a você! </li>
+                  <li> Marcílio Dias cadastrou nova Peneira! </li>
+                </ul>
+              </div>
+            </header>
+
+
+
+        </head>
+        <body>
+           
+          
+              <!-- Perfil -->
+              <div class="profile">
+                <div class="profile-header">
+                  <div class="profile-top">
+                    <!-- Foto do atleta -->
+                    <img src="../imagens/Taquaras.jpeg" alt="Foto de Perfil" class="profile-pic" />
+                
+                    <!-- Dados do perfil -->
+                    <div class="profile-info">
+                      <h2>A.D.C Taquaras </h2>
+                      <p>Clube de Futebol</p>
+                      <p><strong>Perfil oficial </strong></p>
+                      <p><strong>Desde 1969</strong></p>
+                      <p><strong>Ibirama SC</strong></p>
+                      <p>
+                         Ibirama - Santa Catarina <br>
+                         </p>
+                    </div>
+                  </div>
+                
+               
+                </div>
+                </div>
+
+<section class="competitions">
+  <h3>Competições</h3>
+  <div class="competitions-grid">
+    
+    <div class="competition-card">
+      <img src="../imagens/Vale Norte.jpeg" alt="Liga vale norte" class="competition-logo">
+      <span class="competition-name">Liga Vale Norte</span>
+    </div>
+
+    
+
+  </div>
+</section>
+
+
+
+               <section class="tryouts">
+      <h3>Peneiras</h3>
+  <p> <strong>Não há Peneiras Cadastradas!</strong></p>
+                </section>
+
+                <!--Estádios-->
+                <section class="stadiums">
+                <h3>Estádios</h3>
+
+                <div class="stadium-card">
+                  <img src="../imagens/EstadioTaquaras.jpg" alt="Estádio Alfredo João Krieck" class="stadium-image" />
+                  <p class="stadium-name"> Estádio iroldo koepsel , Ibirama - SC</p>
+                  <a href="https://www.google.com.br/maps/place/Est%C3%A1dio+Iroldo+Koepsel/@-27.0512298,-49.5602621,12.25z/data=!4m6!3m5!1s0x94dfad3859cdcd4f:0x651bb41fd34b3c89!8m2!3d-27.0390823!4d-49.4950406!16s%2Fg%2F11r_xv66r2?entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D" 
+                     target="_blank" 
+                     class="map-link">📍 Ver no Mapa</a>
+                </div>
+
+                </section>
+
+                <!-- Fotos -->
+                <div class="fotos-section">
+                  <h3>Fotos</h3>
+                  <div class="fotos-grid">
+                    <img src="../imagens/ImagemTaquaras1.jpg" alt="Foto 1" class="foto-post">
+                    <img src="../imagens/ImagemTaquaras2.jpg" alt="Foto 2" class="foto-post">
+                    <img src="../imagens/ImagemTaquaras3.jpg" alt="Foto 3" class="foto-post">
+                    <img src="../imagens/ImagemTaquaras4.jpg" alt="Foto 3" class="foto-post">
+                    <img src="../imagens/ImagemTaquaras5.jpg" alt="Foto 3" class="foto-post">
+                    
+                  </div>
+                </div>
+
+
+                <section class="contatos">
+                  <h2>Contatos</h2>
+                  <p>Email: <a href="https://mail.google.com/">adctaquaras@gmail.com</a></p>
+                  
+                  </a></p>
+                  <p>Instagram: <a href="https://www.instagram.com/adctaquarasoficial/" target="_blank" rel="noopener">
+                    @adctaquarasoficial
+                  </a></p>
+                </section>
+
+
+             
+
+              <footer class="footer">
+              <div class="footer-content">
+                  <div class="footer-left">
+                    <h4>Sport HUB</h4>
+                    <p>Conectando atletas, clubes e oportunidades pelo Brasil.</p>
+                  </div>
+                  <div class="footer-center">
+                    <h4>Links úteis</h4>
+                    <ul>
+                      <li><a href="#">Sobre nós</a></li>
+                      <li><a href="#">Contato</a></li>
+                      
+                    </ul>
+                  </div>
+                  <div class="footer-right">
+                    <h4>Políticas</h4>
+                    <div class="social-icons">
+                      <ul>
+                      <li><a href="#">Políticas de Privacidade</a></li>
+                      <li><a href="#">Diretrizes da Comunidade</a></li>
+                      
+                    </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-bottom">
+                  <p>&copy; 2025 Sport HUB. Todos os direitos reservados.</p>
+                </div>
+              </footer>
+                
+              </div>
+            </div>
+            <script>
+              const btn = document.getElementById('notificacoes-btn');
+              const box = document.getElementById('notificacoes-box');
+            
+              btn.addEventListener('click', () => {
+                box.classList.toggle('hidden');
+              });
+            </script>
+          </body>
+        </html>

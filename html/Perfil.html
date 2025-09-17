@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+        <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Perfil do Usuário</title>
+          <link rel="stylesheet" href="../css/Perfil.css" />
+
+          <div class="container">
+            <header class="header">
+              <div class="title">Sport HUB</div>
+              <div class="buttons">
+                <input type="text" id="searchInput" placeholder="Buscar clube..." class="search-input">
+                <!--<button id="searchBtn" class="search-btn">🔍 Procurar</button>-->
+                <button id="notificacoes-btn">🔔 Notificações</button>
+                <a href="ClubesPeneirasAtleta.html" class="profile-btn">👤 Principal</a>
+              </div>
+        
+              <div id="notificacoes-box" class="hidden">
+                <ul>
+                  <li> Peneira do Santa Catarina é amanhã! </li>
+                  <li> A.D.C Taquaras enviou um E-mail a você! </li>
+                  <li> Marcílio Dias cadastrou nova Peneira! </li>
+                </ul>
+              </div>
+            </header>
+
+
+
+        </head>
+        <body>
+            
+          
+              <!-- Perfil -->
+              <div class="profile">
+                <div class="profile-header">
+                  <div class="profile-top">
+                    <!-- Foto do atleta -->
+                    <img src="../imagens/LeandroVera.jpeg" alt="Foto de Perfil" class="profile-pic" />
+                
+                    <!-- Dados do perfil -->
+                    <div class="profile-info">
+                      <h2>Leandro Voigt</h2>
+                      <p><strong>1</strong> publicação</p>
+                      <p><strong>24/04/2007</strong></p>
+                      <p><strong>Lateral Esquerdo</strong></p>
+                      <p><strong>Canhoto</strong></p>
+                      <p><strong>1.70 / 5.57</strong><br>
+                         Ibirama - Santa Catarina <br>
+                         </p>
+                    </div>
+                  </div>
+                
+                  <!-- Bandeiras abaixo -->
+                  <div class="profile-flags">
+                    <img src="../imagens/Bandeira_do_município_de_Lontras_(SC).svg.png" alt="Município Residencial">
+                    <img src="../imagens/ibiramaZap.jpg" alt="Município Residencial">
+                    <img src="../imagens/Bandeira_do_município_de_Rio_do_Sul_(SC).svg" alt="Município de Nascimento">
+                   
+                    <img src="../imagens/Bandeira_de_Santa_Catarina.png" alt="Estado">
+                    <img src="../imagens/bandeiradobrasil.webp" alt="País">
+                  </div>
+                </div>
+                </div>
+                <div class="career-section">
+                    <h3>📖 Carreira</h3>
+                    <div class="divider"></div>
+                    <div class="highlights">
+                      <div class="highlight"><img src="../imagens/CMELontras.jpeg" alt="CME Lontras"><p>CME Lontras</p></div>
+                      <div class="highlight"><img src="../imagens/InterDeLages.jpeg" alt="Inter de Lages"><p>Inter de Lages</p></div>
+                      <div class="highlight"><img src="../imagens/AtléticoIbirama.jpeg" alt="Atlético Ibirama"><p>Atlético Ibirama</p></div>
+                      <div class="highlight"><img src="../imagens/Boca Juniors.enc" alt="Boca Juniors"><p>Boca Juniors</p></div>
+                      <div class="highlight"><img src="../imagens/VeraCruz.jpeg" alt="Vera Cruz"><p>Vera Cruz</p></div>
+                      <div class="highlight"><img src="../imagens/CMEIbirama.jpeg" alt="CME Ibirama"><p>CME Ibirama</p></div>
+                    </div>
+                  </div>
+          
+                <!-- Vídeos -->
+                <div class="videos-section">
+                    <h3>📹 Vídeos</h3>
+                  <div class="videos">
+                    <div class="video-card">
+                      <video controls>
+                        <source src="video1.mp4" type="video/mp4" />
+                        Seu navegador não suporta o vídeo.
+                      </video>
+                    </div>
+                  </div>
+                  <button class="add-video">➕ Adicionar Vídeo</button>
+                </div>
+
+            <footer class="footer">
+              <div class="footer-content">
+                  <div class="footer-left">
+                    <h4>Sport HUB</h4>
+                    <p>Conectando atletas, clubes e oportunidades pelo Brasil.</p>
+                  </div>
+                  <div class="footer-center">
+                    <h4>Links úteis</h4>
+                    <ul>
+                      <li><a href="#">Sobre nós</a></li>
+                      <li><a href="#">Contato</a></li>
+                      
+                    </ul>
+                  </div>
+                  <div class="footer-right">
+                    <h4>Políticas</h4>
+                    <div class="social-icons">
+                      <ul>
+                      <li><a href="#">Políticas de Privacidade</a></li>
+                      <li><a href="#">Diretrizes da Comunidade</a></li>
+                      
+                    </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-bottom">
+                  <p>&copy; 2025 Sport HUB. Todos os direitos reservados.</p>
+                </div>
+              </footer>
+
+
+
+              </div>
+
+              
+            </div>
+            <script>
+              const btn = document.getElementById('notificacoes-btn');
+              const box = document.getElementById('notificacoes-box');
+            
+              btn.addEventListener('click', () => {
+                box.classList.toggle('hidden');
+              });
+            </script>
+          </body>
+        </html>
+        

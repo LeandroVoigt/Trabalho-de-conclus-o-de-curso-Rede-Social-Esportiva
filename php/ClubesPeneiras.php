@@ -1,0 +1,225 @@
+
+<?php
+session_start();
+
+// Se não estiver logado, manda pro login
+if (!isset($_SESSION['id'])) {
+    header("Location: login.html");
+    exit();
+}
+
+$usuario_nome = $_SESSION['usuario_nome'];
+$usuario_tipo = $_SESSION['usuario_tipo']; // atleta ou clube
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clubes e Peneiras</title>
+  <link rel="stylesheet" href="../css/ClubesPeneiras.css" />
+  <link rel="stylesheet" href="../js/ClubesPeneiras.js">
+ <!--<link rel="stylesheet" href="../php/salvar.php"> -->
+
+  <div class="container">
+    <header class="header">
+      <div class="title">Sport HUB</div>
+      <div class="buttons">
+        <input type="text" id="searchInput" placeholder="Buscar clube..." class="search-input">
+        <!--<button id="searchBtn" class="search-btn">🔍 Procurar</button>-->
+        <button id="notificacoes-btn">🔔 Notificações</button>
+
+        <!--Vai difenciar os Perfis-->
+      <a href="<?php echo ($usuario_tipo === 'clube') ? 'criar_perfil.php' : 'perfil_atleta.php'; ?>"  
+      class="profile-btn">Perfil</a>
+
+
+      </div>
+
+      <div id="notificacoes-box" class="hidden">
+        <ul>
+          <li> Peneira do Santa Catarina é amanhã! </li>
+          <li> A.D.C Taquaras enviou um E-mail a você! </li>
+          <li> Marcílio Dias cadastrou nova Peneira! </li>
+        </ul>
+      </div>
+    </header>
+
+</head>
+<body>
+ 
+
+    <div class="message">
+      Monte seu perfil para participar ou cadastrar Peneiras!
+    </div>
+
+    <div class="main">
+      <aside class="ligas">
+        <h2>Ligas Profissionais</h2>
+        <ul>
+          <li><img src="../imagens/CatarinenseA.jpeg" alt="Série A"> Campeonato Catarinense Série A</li>
+          <li><img src="../imagens/CampeonatoCatarinenseB.png" alt="Série B"> Campeonato Catarinense Série B</li>
+          <li><img src="../imagens/CatarinenseC.jpeg" alt="Série C"> Campeonato Catarinense Série C</li>
+          <li><img src="../imagens/CopadoBrasil.jpeg" alt="Copa"> Copa do Brasil</li>
+          <li><img src="../imagens/Campeonato_Brasileiro_Série_A.png" alt="Série A"> Campeonato Brasileiro Série A</li>
+          <li><img src="../imagens/BrasileiraoB.png" alt="Série B"> Campeonato Brasileiro Série B</li>
+          <li><img src="../imagens/BrasileiraoSerieC.png" alt="Série C"> Campeonato Brasileiro Série C</li>
+          <li><img src="../imagens/BrasileirãoD.jpeg" alt="Série D"> Campeonato Brasileiro Série D</li>
+          <li><img src="../imagens/JoguinhosAbertos18.jpg" alt="JoguinhosAbertos18"> Jogos Abertos SC</li>
+          <li><img src="../imagens/copa_SC.jpg" alt="Copa SC"> Copa Santa Catarina</li>
+        </ul>
+        <h2>Ligas Amadoras</h2>
+          <li><img src="../imagens/jimavi.png" alt="Jimavi"> Jimavi sub-15</li>
+          <li><img src="../imagens/jimavi.png" alt="Jimavi"> Jimavi sub-17</li>
+          <li><img src="../imagens/LigaRioSulense.jpeg" alt="Liga RioSulense"> Liga RioSulense</li>
+          <li><img src="../imagens/LigaRioSulense20.jpeg" alt="Liga RioSulense"> Liga RioSulense Sub-20</li>
+          <li><img src="../imagens/Vale Norte.jpeg" alt="Vale Norte"> Liga Vale Norte</li>
+          
+          
+
+      </aside>
+
+      <section class="clubes" id="clubesList">
+        <div class="clube">
+          <img src="../imagens/SantaCatarinaClube.png" alt="Santa Catarina">
+          <h3><a href="../html/SantaHub.html">Santa Catarina</a></h3>
+          <ul>
+            <li><img src="../imagens/CatarinenseA.jpeg"> C.C.F Série A</li>
+            <li><img src="../imagens/BrasileirãoD.jpeg"> C.B Série D</li>
+            <li><img src="../imagens/LigaRioSulense20.jpeg"> LRF Sub-20</li>
+          </ul>
+        </div>
+
+        <div class="clube">
+          <img src="../imagens/Marcílio_Dias.png">
+          <h3><a href="../html/MarcilioHub.html">Marcílio Dias</a></h3>
+
+          <ul>
+            <li><img src="../imagens/CatarinenseA.jpeg"> C.C.F Série A</li>
+            <li><img src="../imagens/BrasileirãoD.jpeg"> C.B Série D</li>
+          </ul>
+        </div>
+
+        <div class="clube">
+          <img src="../imagens/Taquaras.jpeg">
+          <h3><a href="../html/TaquarasHub.html">A.D.C Taquaras</a></h3>
+
+          <ul>
+            <li><img src="../imagens/Vale Norte.jpeg"> L.V.N.D</li>
+          </ul>
+        </div>
+
+        <div class="clube">
+          <img src="../imagens/União Taió.jpeg" alt="C.E.R União">
+          <h3><a href="../html/UniaoHub.html">C.E.R União</a></h3>
+
+          
+          <ul>
+            <li><img src="../imagens/LigaRioSulense.jpeg"> L.R.F Ouro</li>
+            <li><img src="../imagens/LigaRioSulense20.jpeg"> L.R.F Sub-20</li>
+          </ul>
+        </div>
+
+          <div class="clube">
+          <img src="../imagens/avai-fc.png" alt="avaí">
+          <h3><a href="../html/AvaiHub.html">Avaí</a></h3>
+          <ul>
+            <li><img src="../imagens/CatarinenseA.jpeg"> C.C.F Série A</li>
+            <li><img src="../imagens/BrasileiraoB.png"> C.B Série B</li>
+            
+          </ul>
+        </div>
+
+        <div class="clube">
+          <img src="../imagens/CA_Metropolitano_(Blumenau_-_SC).svg.png" alt="Metropolitano">
+          <h3><a href="../html/MetropolitanoHub.html">Metropolitano</a></h3>
+          <ul>
+            <li><img src="../imagens/CampeonatoCatarinenseB.png"> C.C.F Série B</li>
+            <li><img src="../imagens/copa_SC.jpg"> Copa SC</li>
+            
+          </ul>
+        </div>
+
+
+      </section>
+      
+
+    </div>
+                  <footer class="footer">
+              <div class="footer-content">
+                  <div class="footer-left">
+                    <h4>Sport HUB</h4>
+                    <p>Conectando atletas, clubes e oportunidades pelo Brasil.</p>
+                  </div>
+                  <div class="footer-center">
+                    <h4>Links úteis</h4>
+                    <ul>
+                      <li><a href="#">Sobre nós</a></li>
+                      <li><a href="#">Contato</a></li>
+                      
+                    </ul>
+                  </div>
+                  <div class="footer-right">
+                    <h4>Políticas</h4>
+                    <div class="social-icons">
+                      <ul>
+                      <li><a href="#">Políticas de Privacidade</a></li>
+                      <li><a href="#">Diretrizes da Comunidade</a></li>
+                      
+                    </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-bottom">
+                  <p>&copy; 2025 Sport HUB. Todos os direitos reservados.</p>
+                </div>
+              </footer>
+  </div>
+
+  <script>
+  const btn = document.getElementById("notificacoes-btn");
+  const box = document.getElementById("notificacoes-box");
+  const searchBtn = document.getElementById("searchBtn");
+  const searchInput = document.getElementById("searchInput");
+  const clubesList = document.getElementById("clubesList");
+
+  btn.addEventListener("click", () => {
+    box.classList.toggle("hidden");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!box.contains(e.target) && !btn.contains(e.target)) {
+      box.classList.add("hidden");
+    }
+  });
+
+  searchBtn.addEventListener("click", () => {
+    const filtro = searchInput.value.toLowerCase();
+    const clubes = clubesList.querySelectorAll(".clube");
+
+    clubes.forEach(clube => {
+      const nome = clube.querySelector("h3").textContent.toLowerCase();
+      clube.style.display = nome.includes(filtro) ? "block" : "none";
+    });
+  });
+
+  // 👇 Adicione isso aqui no final:
+  //  fetch("session_info.php")
+  //  .then(response => response.json())
+  //  .then(data => {
+  //    if (data.status === "ok") {
+   //     const tipo = data.tipo;
+  //      const perfilBtn = document.getElementById("perfil-link");
+  //
+  //      if (tipo === "clube") {
+  //        perfilBtn.href = "PerfilClube.html"; 
+   //     } else {
+   //       perfilBtn.href = "Perfil.html";
+    //    }
+    //  } else {
+     //   window.location.href = "login.html";
+    //  }
+   // });
+</script>
+</body>
+</html>
